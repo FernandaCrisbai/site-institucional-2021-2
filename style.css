@@ -1,0 +1,110 @@
+/*
+Cor primária: #F9D84D
+Cor primária clara: #FFEC9C
+Cor segundária #F94D58
+Cor secundária clara: #FD9CA3
+Cor de fundo: #333333
+Cor do texto: #CCCCCC
+*/
+
+/* Variaveis*/
+:root {
+    --cor-prim: #f9d84d;
+    --cor-prim-clara: #ffec9c;
+    --cor-secun: #f94d58;
+    --cor-secun-clara: #f94d58;
+    --cor-fundo: #333333;
+    --cor-texto: #cccccc;
+    --cor-fundo-clara: #555555;
+
+}
+/************ CSS reset *************/
+*{
+    font-family: Calibri, Arial, sans-serif;
+    padding: 0; /*zerar a margem */
+    margin: 0;  /*zerar a margem */
+    box-sizing: border-box; /*borda faz parte das dimensões do elemento */
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+/************************************/
+header{
+    display: flex;
+    justify-content: center; /*centralização horizontal*/
+    align-items: center; /*centralização vertical*/
+    background-color: var(--cor-prim);
+    min-height: 50px; /*Altura mínima */
+    flex-wrap: wrap; /*força a quebra entre elementos flex*/
+}
+#img-logo{
+    background-color: transparent;
+}
+
+nav{
+    display: flex;
+    justify-content: center; /*centralização horizontal*/
+    align-items: center; /*centralização vertical*/
+    background-color: var(--cor-secun);
+    min-height: 25px; /*Altura mínima */
+    width: 100%;
+    margin: 5px;
+
+}
+
+main {
+    display: flex;
+    justify-content: center; /*centralização horizontal*/
+    align-items: stretch; /*filhos com 100% a altura do pai */
+    min-height: 200px; /*Altura mínima */
+}
+
+footer {
+    display: flex;
+    justify-content: center; /*centralização horizontal*/
+    align-items: center; /*centralização vertical*/
+    background-color: var(--cor-fundo-clara);
+    min-height: 50px; /*Altura mínima */
+}
+
+section {
+    display: flex;
+    justify-content: center; /*centralização horizontal*/
+    align-items: normal; /*centralização vertical*/
+    flex-direction: column; /*itens filhos em coluna (na vertical) */
+    border: 1px solid rgb(44, 1, 75);
+    background-color: rgb(159, 127, 224);
+    width: 75%;
+    margin: 5px;
+    
+}
+aside {
+    display: flex;
+    justify-content: center; /*centralização horizontal*/
+    align-items: center; /*centralização vertical*/
+    border: 1px dashed dimgray;
+    background-color: lightgrey;
+    width: 25%;
+    margin: 5px;
+}
+
+article {
+    display: flex;
+    justify-content: center; /*centralização horizontal*/
+    align-items: center; /*centralização vertical*/
+    border: 1px solid sienna;
+    background-color: linen;
+    margin: 5px;
+    min-height: 100px;
+    width: 100%;
+}
+/*Regras para sites com largura de até 600px*/
+@media screen and (max-width: 600px) {
+
+    main{
+        /*muda a direção dos filhos para coluna (vertical)*/
+        flex-direction: column;
+    }
+    section, aside{
+        width: 100%;
+    }
+}
