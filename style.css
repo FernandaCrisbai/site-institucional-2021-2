@@ -14,7 +14,7 @@ Cor do texto: #CCCCCC
     --cor-secun: #f94d58;
     --cor-secun-clara: #f94d58;
     --cor-fundo: #333333;
-    --cor-texto: #cccccc;
+    --cor-texto: #eeeeee;
     --cor-fundo-clara: #555555;
 
 }
@@ -24,9 +24,9 @@ Cor do texto: #CCCCCC
     padding: 0; /*zerar a margem */
     margin: 0;  /*zerar a margem */
     box-sizing: border-box; /*borda faz parte das dimensões do elemento */
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-}
+   /* background-color: var(--cor-fundo);
+    color: var(--cor-texto); 
+*/}
 /************************************/
 header{
     display: flex;
@@ -40,17 +40,42 @@ header{
     background-color: transparent;
 }
 
-nav{
+#menu-principal
+{
     display: flex;
     justify-content: center; /*centralização horizontal*/
     align-items: center; /*centralização vertical*/
     background-color: var(--cor-secun);
     min-height: 25px; /*Altura mínima */
     width: 100%;
-    margin: 5px;
-
+    
+    
+}
+#menu-principal ul { /*afeta o <ul> dentro #menu-principal*/
+ list-style: none; /* tira a decoração dos itens da lista */
+ display: flex; /* Contatner flex - todos os itens filhos na horizontal por padrão*/
 }
 
+#menu-principal ul li {
+    height: 36px;
+    margin: 0 10px; /* 0 topo, fundo; 10px esquerdo e direito */
+    
+}
+
+#menu-principal ul li a {
+    display: inline-block;
+    align-items: center;
+    display: flex;
+    padding: 0 10px;
+    color: var(--cor-texto);
+    text-decoration: none;
+    background-color: var(--cor-secun);
+}
+
+#menu-principal ul li a:hover {
+    filter: brightness(1.2);
+
+}
 main {
     display: flex;
     justify-content: center; /*centralização horizontal*/
